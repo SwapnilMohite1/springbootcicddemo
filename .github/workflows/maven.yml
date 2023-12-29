@@ -11,7 +11,7 @@ name: Java CI with Maven
 on:
   push:
     branches: [ "main" ]
-  
+
 
 jobs:
   build:
@@ -28,6 +28,9 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+    - name: Execute Jar file
+      run: sudo kill -9 `sudo lsof -t -i:80` & sudo java -jar /home/ubuntu/actions-runner/_work/springbootcicddemo/springbootcicddemo/target/springbootcicd-0.0.1-SNAPSHOT.jar &
+
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
     - name: Update dependency graph

@@ -8,6 +8,6 @@ public class DemoController {
 
     @GetMapping("/hello")
     public String demo(){
-        return "Springboot CI/CD is now working";
+        return "Springboot CI/CD is now working fine";
     }
 }

@@ -8,6 +8,6 @@ public class DemoController {
 
     @GetMapping("/hello")
     public String demo(){
-        return "Springboot CI/CD is working fine";
+        return "Springboot CI/CD pipeline using GitHub action is working fine";
     }
 }

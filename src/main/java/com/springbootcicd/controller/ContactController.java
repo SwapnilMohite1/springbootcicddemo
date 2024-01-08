@@ -1,2 +1,12 @@
-package com.springbootcicd.controller;public class ContactController {
+package com.springbootcicd.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class ContactController {
+    @GetMapping("/contact")
+    public String savaContactInquiryDetails() {
+        return "Inquiry details are saved to DB";
+    }
 }
